@@ -82,11 +82,11 @@ pipeline {
                     allowMissing:true,
                     alwaysLinkToLastBuild: false,
                     keepAll:true,
-                    reportDir: "build/coverage",
+                    reportDir: "build/reports/jest/coverage",
                     reportFiles: 'index.html',
                     reportName: "Coverage report"
                   ] 
-                stash name: 'coverage_reports', includes: 'coverage/**'
+                stash name: 'coverage_reports', includes: '**/coverage/**'
             }
             post {
                 always {
