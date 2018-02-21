@@ -39,9 +39,6 @@ pipeline {
         }
         stage('Install Dependencies') {
             agent any
-            options {
-                skipDefaultCheckout() 
-            }
             steps {
                 script {              
                     env.PACKAGE_ARTIFACT_BUILD_NUMBER = env.BUILD_NUMBER
