@@ -1,0 +1,42 @@
+{
+  "name": "nodejs-api-skeleton",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Node.js API Skeleton with Jenkins CD pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "start": "node src/api/index.js"
+  },
+  "jest-junit": {
+    "output": "build/reports/jest/test/junit.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3aran/nodejs-api-skeleton.git"
+  },
+  "keywords": [
+    "Node.js",
+    "API"
+  ],
+  "author": "w3aran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w3aran/nodejs-api-skeleton/issues"
+  },
+  "homepage": "https://github.com/w3aran/nodejs-api-skeleton#readme",
+  "devDependencies": {
+    "eslint": "4.18.1",
+    "jest": "22.4.0",
+    "jest-junit": "3.6.0"
+  },
+  "dependencies": {
+    "boom": "5.2.0",
+    "hapi": "16.6.2"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
