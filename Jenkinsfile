@@ -182,8 +182,8 @@ pipeline {
                 // sh '''
                 // npm run artifact:build
                 // '''
-                stash name: 'artifact', includes: 'build/target/**'
-                archiveArtifacts artifacts: 'build/target/**'
+                // stash name: 'artifact', includes: 'build/target/**'
+                // archiveArtifacts artifacts: 'build/target/**'
             }
         }
         stage('Publishing artifact') {
@@ -198,7 +198,7 @@ pipeline {
                 skipDefaultCheckout() 
             }
             steps {
-                unstash 'artifact'
+                // unstash 'artifact'
                 echo 'publishing to artifactory'
             }
         }
